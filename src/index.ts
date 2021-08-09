@@ -7,3 +7,5 @@ export {
 
 const filePath = process.argv[2]
 const content = fs.readFileSync(filePath)
+const hash = DHash.calculateHashAsync(content)
+console.log(hash)
